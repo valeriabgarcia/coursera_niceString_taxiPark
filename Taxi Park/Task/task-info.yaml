@@ -73,8 +73,8 @@ files:
     initialized_from_dependency: false
     selected: true
     status: Unchecked
-  - offset: 1725
-    length: 365
+  - offset: 1721
+    length: 222
     placeholder_text: TODO()
     initial_state:
       length: 6
@@ -82,7 +82,7 @@ files:
     initialized_from_dependency: false
     selected: true
     status: Unchecked
-  - offset: 2230
+  - offset: 2083
     length: 379
     placeholder_text: TODO()
     initial_state:
