@@ -40,11 +40,9 @@ fun TaxiPark.findFrequentPassengers(driver: Driver): Set<Passenger> =
 fun TaxiPark.findSmartPassengers(): Set<Passenger> =
     this.allPassengers
         .filter { p ->
-            this.trips
-                .filter { it.passengers.contains(p) && it.discount != null }
-                .toList().size > this.trips
-                .filter { it.passengers.contains(p) && it.discount == null }
-                .toList().size
+            val withDiscount = trips.count { t -> p in t.passengers && t.discount != null}
+            val withoutDiscount = trips.count { t -> p in t.passengers && t.discount == null}
+            withDiscount > withoutDiscount
         }
         .toSet()
 
